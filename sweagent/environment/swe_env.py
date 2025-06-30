@@ -155,10 +155,7 @@ class SWEEnv:
             startup_commands = [
                 f"cd /{self.repo.repo_name}",
                 "export ROOT=$(pwd -P)",
-                "git status",
-                "git fetch",
-                f"git checkout {self.repo.base_commit}",
-                "git clean -fdq",
+                *self.repo.get_reset_commands(),
             ]
             self.communicate(
                 input=" && ".join(startup_commands),
@@ -184,7 +181,11 @@ class SWEEnv:
         """
         self._chook.on_start_deployment()
         asyncio.run(self.deployment.start())
-        asyncio.run(self.deployment.runtime.create_session(CreateBashSessionRequest(startup_source=["/root/.bashrc"])))
+        asyncio.run(
+            self.deployment.runtime.create_session(
+                CreateBashSessionRequest(startup_source=["/root/.bashrc"], startup_timeout=10)
+            )
+        )
         self.set_env_variables({"LANG": "C.UTF-8", "LC_ALL": "C.UTF-8"})
         self.logger.info("Environment Initialized")
 

@@ -67,7 +67,7 @@ class TemplateConfig(BaseModel):
     next_step_template: str = "Observation: {{observation}}"
 
     next_step_truncated_observation_template: str = (
-        "Observation: {{observation}}<response clipped>"
+        "Observation: {{observation[:max_observation_length]}}<response clipped>"
         "<NOTE>Observations should not exceeded {{max_observation_length}} characters. "
         "{{elided_chars}} characters were elided. Please try a different command that produces less output "
         "or use head/tail/grep/redirect the output to a file. Do not use interactive pagers.</NOTE>"
@@ -77,7 +77,9 @@ class TemplateConfig(BaseModel):
     """
 
     max_observation_length: int = 100_000
-    """Truncate observation to this length if it exceeds it."""
+    """Truncate observation to this length if it exceeds it.
+    This in measured in characters, i.e., as `len(observation)`.
+    """
 
     next_step_no_output_template: str = None  # type: ignore
     """Template for the next step when the last output was empty. Defaults to next_step_template."""
@@ -105,7 +107,9 @@ class TemplateConfig(BaseModel):
 
     command_cancelled_timeout_template: str = (
         "The command '{{command}}' was cancelled because it took more than {{timeout}} seconds. "
-        "Please try a different command that completes more quickly."
+        "Please try a different command that completes more quickly. "
+        "Note: A common source of this error is if the command is interactive or requires user input "
+        "(it is impossible to receive user input in the current environment, so the command will never complete)."
     )
     """Message template for when the agent's command was cancelled because it took too long.
     Available variables: `timeout`, `command`
@@ -159,6 +163,24 @@ class DefaultAgentConfig(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
 
+class ShellAgentConfig(BaseModel):
+    name: str = "main"
+    templates: TemplateConfig = Field(default_factory=TemplateConfig)
+    tools: ToolConfig = Field(default_factory=ToolConfig)
+    history_processors: list[HistoryProcessor] = Field(default_factory=lambda: [DefaultHistoryProcessor()])
+    model: ModelConfig = Field(description="Model options.")
+
+    max_requeries: int = 3
+    """Maximum number of times to requery the model after an error, such as a
+    formatting error, a blocked action, or a bash syntax error.
+    """
+
+    type: Literal["shell"] = "shell"
+
+    # pydantic config
+    model_config = ConfigDict(extra="forbid")
+
+
 class RetryAgentConfig(BaseModel):
     name: str = "retry_main"
     agent_configs: list[DefaultAgentConfig]
@@ -167,7 +189,7 @@ class RetryAgentConfig(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
 
-AgentConfig = Annotated[DefaultAgentConfig | RetryAgentConfig, Field(union_mode="left_to_right")]
+AgentConfig = Annotated[DefaultAgentConfig | RetryAgentConfig | ShellAgentConfig, Field(union_mode="left_to_right")]
 
 
 class _BlockedActionError(Exception):
@@ -218,6 +240,11 @@ def get_agent_from_config(config: AgentConfig) -> AbstractAgent:
         return DefaultAgent.from_config(config)
     elif config.type == "retry":
         return RetryAgent.from_config(config)
+    elif config.type == "shell":
+        # Need to defer import to avoid circular dependency
+        from sweagent.agent.extra.shell_agent import ShellAgent
+
+        return ShellAgent.from_config(config)
     else:
         msg = f"Unknown agent type: {config.type}"
         raise ValueError(msg)
@@ -691,7 +718,6 @@ class DefaultAgent(AbstractAgent):
         elif len(step.observation) > self.templates.max_observation_length:
             templates = [self.templates.next_step_truncated_observation_template]
             elided_chars = len(step.observation) - self.templates.max_observation_length
-            step.observation = step.observation[: self.templates.max_observation_length]
         else:
             # Show standard output template if there is observation content
             templates = [self.templates.next_step_template]
@@ -873,9 +899,9 @@ class DefaultAgent(AbstractAgent):
                 pf = (
                     PatchFormatter(
                         patch,
-                        read_method=lambda path: self._env.read_file(
-                            PurePosixPath("/") / self._env.repo.repo_name / path
-                        ),  # type: ignore[attr-defined]
+                        read_method=lambda path: self._env.read_file(  # type: ignore[attr-defined]
+                            PurePosixPath("/") / self._env.repo.repo_name / path  # type: ignore[attr-defined]
+                        ),
                     )
                     if patch
                     else None
@@ -1069,6 +1095,8 @@ class DefaultAgent(AbstractAgent):
             # Errors that are raised
 
             except KeyboardInterrupt:
+                raise
+            except EOFError:
                 raise
 
             # Errors that cause requery

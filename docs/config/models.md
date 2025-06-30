@@ -16,6 +16,10 @@
 See [the model section](../installation/keys.md) in the installation guide.
 Remember to unset spending limits and configure the action parser if you cannot support function calling.
 
+For "cost" tracking with local models, you can optionally provide a custom `litellm_model_registry` file in your configuration.
+This allows you to define custom pricing information for your local models instead of disabling cost limits entirely.
+See the [local models section](../installation/keys.md#custom-model-registry-for-cost-tracking) for detailed instructions.
+
 ### Anthropic Claude
 
 Prompt caching makes SWE-agent several times more affordable. While this is done automatically for models like `gpt-4o`,
@@ -48,7 +52,7 @@ We recommend that you check how often you hit the cache. A very simple way is to
 grep -o "cached_tokens=[0-9]*" django__django-11299.debug.log
 ```
 
-Note that the maximum number of output tokens of Claude 3.7 can be extended with extra headers.
+Note that the maximum number of output tokens of Claude 3.7/4 can be extended with extra headers.
 See [this issue in litellm](https://github.com/BerriAI/litellm/issues/8984) and and [swe-agent PR #1035](https://github.com/SWE-agent/SWE-agent/issues/1035)
 for omore information.
 Since [#1036](https://github.com/SWE-agent/SWE-agent/pull/1036) you can also manually set the maximum output tokens and override the information
