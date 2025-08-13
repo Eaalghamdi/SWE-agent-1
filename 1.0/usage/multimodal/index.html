@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://swe-agent.com/latest/usage/competitive_runs/">
+        <link rel="canonical" href="https://swe-agent.com/latest/usage/multimodal/">
       
       
-        <link rel="prev" href="../batch_mode/">
-      
-      
-        <link rel="next" href="../adding_custom_tools/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -22,7 +18,7 @@
     
     
       
-        <title>Competitive runs - SWE-agent documentation</title>
+        <title>Multimodal Support - SWE-agent documentation</title>
       
     
     
@@ -113,7 +109,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#competitive-runs" class="md-skip">
+        <a href="#multimodal-support" class="md-skip">
           Skip to content
         </a>
       
@@ -169,7 +165,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Competitive runs
+              Multimodal Support
             
           </span>
         </div>
@@ -282,12 +278,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../.." class="md-tabs__link">
           
   
@@ -400,8 +394,6 @@
       
   
   
-    
-  
   
   
     
@@ -421,17 +413,14 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -448,13 +437,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Getting Started
@@ -681,10 +670,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -711,11 +698,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
         
           
           <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
@@ -731,7 +718,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_3">
             <span class="md-nav__icon md-icon"></span>
             Tutorials
@@ -857,32 +844,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Competitive runs
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../competitive_runs/" class="md-nav__link">
         
   
   
@@ -893,53 +858,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#current-competitive-configurations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Current competitive configurations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#memory-consumption" class="md-nav__link">
-    <span class="md-ellipsis">
-      Memory consumption
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tradeoffs-between-resolution-rate-and-cost" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tradeoffs between resolution rate and cost
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2279,29 +2197,161 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#current-competitive-configurations" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Current competitive configurations
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#memory-consumption" class="md-nav__link">
+  <a href="#supported-image-categories" class="md-nav__link">
     <span class="md-ellipsis">
-      Memory consumption
+      Supported Image Categories
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tradeoffs-between-resolution-rate-and-cost" class="md-nav__link">
+  <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Tradeoffs between resolution rate and cost
+      Configuration
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-multimodal-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Multimodal Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disabling-image-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disabling Image Processing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-processing-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image Processing Details
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Image Processing Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Formats
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatic-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#direct-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Direct Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#history-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      History Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool-bundles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool Bundles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#templates-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Templates Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2322,7 +2372,7 @@
 
 
   
-    <a href="https://github.com/SWE-agent/SWE-agent/edit/main/docs/usage/competitive_runs.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/SWE-agent/SWE-agent/edit/main/docs/usage/multimodal.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2330,240 +2380,122 @@
   
 
 
-<h1 id="competitive-runs">Competitive runs</h1>
-<div class="admonition abstract">
-<p class="admonition-title">Running swe-agent competitively on benchmarks</p>
-<p>This page contains information on our competitive runs on SWE-bench, as well as tips and tricks for evaluating on large batches.</p>
+<h1 id="multimodal-support">Multimodal Support</h1>
+<p>SWE-agent supports multimodal AI models that can process both text and images. This enables the agent to work with visual context from GitHub issues, such as screenshots, diagrams, and UI mockups.</p>
+<h2 id="overview">Overview</h2>
+<p>The multimodal implementation automatically:</p>
 <ul>
-<li>Please make sure you're familiar with <a href="../cl_tutorial/">the command line basics</a> and the <a href="../batch_mode/">batch mode</a></li>
-<li>The default examples will be executing code in a Docker sandbox, so make sure you have docker installed (<a href="../../installation/tips/">docker troubleshooting</a>).</li>
+<li><strong>Detects multimodal instances</strong> from SWE-bench Multimodal datasets</li>
+<li><strong>Downloads images</strong> from GitHub issue URLs</li>
+<li><strong>Converts to base64 markdown</strong> format for AI model consumption</li>
+<li><strong>Handles errors gracefully</strong> with fallback to text-only processing</li>
 </ul>
-</div>
-<h2 id="current-competitive-configurations">Current competitive configurations</h2>
-<div class="admonition hint">
-<p class="admonition-title">Most recent configs</p>
-<p>You can find all benchmark submission configs <a href="https://github.com/SWE-agent/SWE-agent/tree/main/config/benchmarks">here</a></p>
-</div>
-<p>Examples of configurations for SWE-bench submissions:</p>
+<h2 id="supported-image-categories">Supported Image Categories</h2>
+<p>Currently, SWE-agent processes images from the <code>problem_statement</code> category, which includes:</p>
 <ul>
-<li><a href="https://github.com/SWE-agent/SWE-agent/blob/main/config/250225_anthropic_filemap_simple_review.yaml">250225_anthropic_filemap_simple_review.yaml</a>:
-  This is our current default one-attempt config. It uses <code>claude-3-7-sonnet-20250219</code>.</li>
-<li><a href="https://github.com/SWE-agent/SWE-agent/blob/main/config/250212_sweagent_heavy_sbl.yaml">250212_sweagent_heavy_sbl.yaml</a>:
-  This config runs 5 attempts with slightly different configurations using <code>claude-3-7-sonnet-latest</code>,
-  then uses o1 to discriminate between them.
-  This is a very expensive configuration.
-  If you use it, also make sure to use Claude 3.7 instead of claude 3.5.</li>
+<li>Screenshots showing bugs or issues</li>
+<li>UI mockups and design specifications</li>
+<li>Diagrams explaining the problem</li>
+<li>Error screenshots and visual evidence</li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Retry configurations and command line arguments</p>
-<p>Note that the structure of the configuration with agents that run multiple attempts is different from the one of the
-default agent. In particular, supplying options like <code>--agent.model.name</code> etc. will cause (potentially confusing)
-error messages. Take a look at the above configuration file to see the structure!</p>
+<div class="admonition note">
+<p class="admonition-title">Design Choice</p>
+<p>Only <code>problem_statement</code> images are processed to provide essential visual context for understanding the task, while preserving agent autonomy in determining solution approaches. Images from <code>patch</code> and <code>test_patch</code> categories may contain solution hints and are not processed.</p>
 </div>
-<p>You can find the command with which to run each config at the top of the config file.</p>
-<p>In order to run on multiple workers with Claude, you need to use multiple API keys in order to have enough cache break points.
-For this, please set the following environment variable before running</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># concatenate your keys</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">CLAUDE_API_KEY_ROTATION</span><span class="o">=</span><span class="s2">&quot;KEY1:::KEY2:::KEY3&quot;</span>
+<h2 id="configuration">Configuration</h2>
+<h3 id="basic-multimodal-setup">Basic Multimodal Setup</h3>
+<p>Use the pre-configured multimodal setup:</p>
+<div class="highlight"><pre><span></span><code>sweagent<span class="w"> </span>run-batch<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--config<span class="w"> </span>config/default_mm_with_images.yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--instances.type<span class="w"> </span>swe_bench<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--instances.subset<span class="w"> </span>multimodal<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--instances.split<span class="w"> </span>dev
 </code></pre></div>
-<p>See our <a href="../../config/models/">notes on Claude</a> for more details.</p>
-<h2 id="memory-consumption">Memory consumption</h2>
-<p>We run our configuration on a machine with 32GB memory and 8 cores.
-To avoid out-of-memory (OOM) situations, we recommend setting</p>
-<div class="highlight"><pre><span></span><code>--instances.deployment.docker_args<span class="o">=</span>--memory<span class="o">=</span>10g
+<h3 id="disabling-image-processing">Disabling Image Processing</h3>
+<p>You can disable image processing globally:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># config/your_config.yaml</span>
+<span class="nt">agent</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">templates</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">disable_image_processing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
-<p>limiting the maximum amount of memory per worker.</p>
-<p>In our case, this completely avoided any instances of running OOM.</p>
-<p>However, OOM situations can potentially lock you out of the server, so
-you might want to use a script like the following as a second layer
-defense to kill any process that hogs too much memory (note that this will affect <em>any</em> script and not just swe-agent):</p>
-<details>
-<summary>Memory sentinel</summary>
+<p>Or for specific instances:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sweagent.agent.problem_statement</span><span class="w"> </span><span class="kn">import</span> <span class="n">SWEBenchMultimodalProblemStatement</span>
 
-<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Memory Sentinel Script</span>
+<span class="n">problem_statement</span> <span class="o">=</span> <span class="n">SWEBenchMultimodalProblemStatement</span><span class="p">(</span>
+    <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Fix the rendering issue&quot;</span><span class="p">,</span>
+    <span class="n">issue_images</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;https://example.com/screenshot.png&quot;</span><span class="p">],</span>
+    <span class="n">disable_image_processing</span><span class="o">=</span><span class="kc">True</span>  <span class="c1"># Skip image processing</span>
+<span class="p">)</span>
+</code></pre></div>
+<h2 id="supported-models">Supported Models</h2>
+<p>Multimodal support works with any vision-capable models, including:</p>
+<ul>
+<li><strong>Claude Sonnet 4</strong></li>
+<li><strong>o3</strong> and <strong>o4-mini</strong></li>
+<li><strong>Gemini 2.5</strong> models</li>
+</ul>
+<p>Example model configuration:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># model_configs/claude-sonnet-4-20250514_mm.yaml</span>
+<span class="nt">model</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claude-sonnet-4-20250514</span>
+<span class="w">  </span><span class="c1"># Vision capabilities automatically detected</span>
+</code></pre></div>
+<h2 id="image-processing-details">Image Processing Details</h2>
+<h3 id="supported-formats">Supported Formats</h3>
+<ul>
+<li>PNG, JPEG, WebP images</li>
+<li>Maximum size: 10MB per image</li>
+</ul>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="automatic-detection">Automatic Detection</h3>
+<p>When loading SWE-bench instances, multimodal support is automatic:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;instance_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example__repo-123&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;problem_statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Fix the chart rendering bug...&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;image_assets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;problem_statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;http://example.com/chart.png&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="direct-usage">Direct Usage</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sweagent.agent.problem_statement</span><span class="w"> </span><span class="kn">import</span> <span class="n">SWEBenchMultimodalProblemStatement</span>
 
-<span class="sd">This script monitors the system&#39;s RAM usage and kills the process with the highest</span>
-<span class="sd">memory consumption if available RAM drops below 5GB.</span>
-
-<span class="sd">Usage:</span>
-<span class="sd">    python memory_sentinel.py</span>
-
-<span class="sd">The script runs continuously, checking memory usage every second.</span>
-
-<span class="sd">Script was generated by Claude 3.7 with the following prompt:</span>
-
-<span class="sd">I&#39;m working on a server and I have one script that sometimes consumes so much memory that the entire server becomes unresponsive. This is a hue problem because then I cannot log in to it anymore.</span>
-
-<span class="sd">Could you write a sentinel script in python that does the following:</span>
-
-<span class="sd">Check the total available RAM of the system (disregarding swap)</span>
-<span class="sd">Check the currently used RAM of the system</span>
-<span class="sd">If we have more than 5G left, do nothing</span>
-<span class="sd">Else, find the process with the highest RAM consumption and kill it. Note: Use the SIGKILL command</span>
-<span class="sd">Check every second</span>
-<span class="sd">&quot;&quot;&quot;</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">signal</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">psutil</span>
-
-<span class="c1"># Set up logging</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span>
-    <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="s2"> - </span><span class="si">%(levelname)s</span><span class="s2"> - </span><span class="si">%(message)s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;memory_sentinel.log&quot;</span><span class="p">,</span> <span class="n">filemode</span><span class="o">=</span><span class="s2">&quot;a&quot;</span>
+<span class="n">problem_statement</span> <span class="o">=</span> <span class="n">SWEBenchMultimodalProblemStatement</span><span class="p">(</span>
+    <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Fix the rendering issue shown in the screenshots&quot;</span><span class="p">,</span>
+    <span class="n">issue_images</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;https://example.com/before.png&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;https://example.com/after.png&quot;</span>
+    <span class="p">]</span>
 <span class="p">)</span>
 
-<span class="c1"># Memory threshold in GB</span>
-<span class="n">MEMORY_THRESHOLD_GB</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="c1"># Convert to bytes for comparison</span>
-<span class="n">MEMORY_THRESHOLD_BYTES</span> <span class="o">=</span> <span class="n">MEMORY_THRESHOLD_GB</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">get_available_ram</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the available RAM in bytes, excluding swap.&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">psutil</span><span class="o">.</span><span class="n">virtual_memory</span><span class="p">()</span><span class="o">.</span><span class="n">available</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">get_total_ram</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the total RAM in bytes, excluding swap.&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">psutil</span><span class="o">.</span><span class="n">virtual_memory</span><span class="p">()</span><span class="o">.</span><span class="n">total</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">get_used_ram</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the used RAM in bytes.&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">psutil</span><span class="o">.</span><span class="n">virtual_memory</span><span class="p">()</span><span class="o">.</span><span class="n">used</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">get_process_with_highest_memory</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Find the process with the highest memory consumption.&quot;&quot;&quot;</span>
-    <span class="n">processes</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">proc</span> <span class="ow">in</span> <span class="n">psutil</span><span class="o">.</span><span class="n">process_iter</span><span class="p">([</span><span class="s2">&quot;pid&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;memory_info&quot;</span><span class="p">]):</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">processes</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">proc</span><span class="o">.</span><span class="n">info</span><span class="p">[</span><span class="s2">&quot;pid&quot;</span><span class="p">],</span> <span class="n">proc</span><span class="o">.</span><span class="n">info</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">proc</span><span class="o">.</span><span class="n">info</span><span class="p">[</span><span class="s2">&quot;memory_info&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">rss</span><span class="p">))</span>
-        <span class="k">except</span> <span class="p">(</span><span class="n">psutil</span><span class="o">.</span><span class="n">NoSuchProcess</span><span class="p">,</span> <span class="n">psutil</span><span class="o">.</span><span class="n">AccessDenied</span><span class="p">,</span> <span class="n">psutil</span><span class="o">.</span><span class="n">ZombieProcess</span><span class="p">):</span>
-            <span class="k">pass</span>
-
-    <span class="c1"># Sort by memory usage (descending)</span>
-    <span class="n">processes</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">processes</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">processes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">return</span> <span class="kc">None</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">kill_process</span><span class="p">(</span><span class="n">pid</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Kill a process using SIGKILL.&quot;&quot;&quot;</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">os</span><span class="o">.</span><span class="n">kill</span><span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="n">signal</span><span class="o">.</span><span class="n">SIGKILL</span><span class="p">)</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to kill process </span><span class="si">{</span><span class="n">pid</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="kc">False</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">format_bytes</span><span class="p">(</span><span class="n">bytes_value</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Format bytes to a human-readable string.&quot;&quot;&quot;</span>
-    <span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;KB&quot;</span><span class="p">,</span> <span class="s2">&quot;MB&quot;</span><span class="p">,</span> <span class="s2">&quot;GB&quot;</span><span class="p">,</span> <span class="s2">&quot;TB&quot;</span><span class="p">]:</span>
-        <span class="k">if</span> <span class="n">bytes_value</span> <span class="o">&lt;</span> <span class="mf">1024.0</span><span class="p">:</span>
-            <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bytes_value</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">unit</span><span class="si">}</span><span class="s2">&quot;</span>
-        <span class="n">bytes_value</span> <span class="o">/=</span> <span class="mf">1024.0</span>
-    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bytes_value</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> PB&quot;</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Main function that runs the memory monitoring loop.&quot;&quot;&quot;</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Memory Sentinel started&quot;</span><span class="p">)</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Memory threshold set to </span><span class="si">{</span><span class="n">MEMORY_THRESHOLD_GB</span><span class="si">}</span><span class="s2">GB&quot;</span><span class="p">)</span>
-
-    <span class="k">try</span><span class="p">:</span>
-        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-            <span class="n">available_ram</span> <span class="o">=</span> <span class="n">get_available_ram</span><span class="p">()</span>
-            <span class="n">total_ram</span> <span class="o">=</span> <span class="n">get_total_ram</span><span class="p">()</span>
-            <span class="n">used_ram</span> <span class="o">=</span> <span class="n">get_used_ram</span><span class="p">()</span>
-
-            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot;Total RAM: </span><span class="si">{</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">total_ram</span><span class="p">)</span><span class="si">}</span><span class="s2">, &quot;</span>
-                <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;Used RAM: </span><span class="si">{</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">used_ram</span><span class="p">)</span><span class="si">}</span><span class="s2">, &quot;</span>
-                <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;Available RAM: </span><span class="si">{</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">available_ram</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-            <span class="p">)</span>
-
-            <span class="k">if</span> <span class="n">available_ram</span> <span class="o">&lt;</span> <span class="n">MEMORY_THRESHOLD_BYTES</span><span class="p">:</span>
-                <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
-                    <span class="sa">f</span><span class="s2">&quot;Available RAM (</span><span class="si">{</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">available_ram</span><span class="p">)</span><span class="si">}</span><span class="s2">) &quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;below threshold of </span><span class="si">{</span><span class="n">MEMORY_THRESHOLD_GB</span><span class="si">}</span><span class="s2">GB&quot;</span>
-                <span class="p">)</span>
-
-                <span class="n">process</span> <span class="o">=</span> <span class="n">get_process_with_highest_memory</span><span class="p">()</span>
-                <span class="k">if</span> <span class="n">process</span><span class="p">:</span>
-                    <span class="n">pid</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">memory</span> <span class="o">=</span> <span class="n">process</span>
-                    <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Killing process </span><span class="si">{</span><span class="n">pid</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">) &quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;using </span><span class="si">{</span><span class="n">format_bytes</span><span class="p">(</span><span class="n">memory</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-                    <span class="k">if</span> <span class="n">kill_process</span><span class="p">(</span><span class="n">pid</span><span class="p">):</span>
-                        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Successfully killed process </span><span class="si">{</span><span class="n">pid</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
-                    <span class="k">else</span><span class="p">:</span>
-                        <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to kill process </span><span class="si">{</span><span class="n">pid</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;No process found to kill&quot;</span><span class="p">)</span>
-
-            <span class="c1"># Sleep for 1 second</span>
-            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Memory Sentinel stopped by user&quot;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unexpected error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="k">raise</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
+<span class="c1"># This downloads images and converts them to base64 markdown</span>
+<span class="n">processed_text</span> <span class="o">=</span> <span class="n">problem_statement</span><span class="o">.</span><span class="n">get_problem_statement</span><span class="p">()</span>
 </code></pre></div>
-
-</details>
-
-<p>If swe-agent dies or you frequently abort it, you might have leftover docker containers
-(they are cleaned up by normal termination of swe-agent but can be left over if it is killed).
-You can use a sentinel script like the following to clean them up periodically
-(note that this will affect <em>any</em> long running container and not just those from swe-agent):</p>
-<details>
-<summary>Container sentinel</summary>
-
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
-
-<span class="k">while</span><span class="w"> </span>true<span class="p">;</span><span class="w"> </span><span class="k">do</span>
-<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Checking for long-running containers...&quot;</span>
-<span class="w">    </span><span class="c1"># List all running containers with their uptime</span>
-<span class="w">    </span>docker<span class="w"> </span>ps<span class="w"> </span>--format<span class="w"> </span><span class="s2">&quot;{{.ID}} {{.RunningFor}}&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>id<span class="w"> </span>running_for<span class="p">;</span><span class="w"> </span><span class="k">do</span>
-<span class="w">        </span><span class="c1"># Extract the number and unit from the running time</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$running_for</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span><span class="o">([</span><span class="m">0</span>-9<span class="o">]</span>+<span class="o">)</span><span class="se">\ </span><span class="o">(</span>hour<span class="p">|</span>hours<span class="o">)</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<span class="w">            </span><span class="nv">hours</span><span class="o">=</span><span class="si">${</span><span class="nv">BASH_REMATCH</span><span class="p">[1]</span><span class="si">}</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="o">((</span><span class="w"> </span>hours<span class="w"> </span>&gt;<span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<span class="w">                </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Killing container </span><span class="nv">$id</span><span class="s2"> (running for </span><span class="nv">$running_for</span><span class="s2">)...&quot;</span>
-<span class="w">                </span>docker<span class="w"> </span><span class="nb">kill</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$id</span><span class="s2">&quot;</span>
-<span class="w">            </span><span class="k">fi</span>
-<span class="w">        </span><span class="k">elif</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$running_for</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span><span class="o">([</span><span class="m">0</span>-9<span class="o">]</span>+<span class="o">)</span><span class="se">\ </span><span class="o">(</span>day<span class="p">|</span>days<span class="o">)</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<span class="w">            </span><span class="c1"># If it&#39;s running for at least a day, it&#39;s definitely over 2 hours</span>
-<span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Killing container </span><span class="nv">$id</span><span class="s2"> (running for </span><span class="nv">$running_for</span><span class="s2">)...&quot;</span>
-<span class="w">            </span>docker<span class="w"> </span><span class="nb">kill</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$id</span><span class="s2">&quot;</span>
-<span class="w">        </span><span class="k">fi</span>
-<span class="w">    </span><span class="k">done</span>
-<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Sleeping for 10 minutes...&quot;</span>
-<span class="w">    </span>sleep<span class="w"> </span><span class="m">600</span><span class="w">  </span><span class="c1"># Wait 600 seconds (10 minutes) before running again</span>
-<span class="k">done</span>
+<h2 id="configuration-options">Configuration Options</h2>
+<p>In order to enable multimodal processing, you need to update the following configuration options:</p>
+<h3 id="history-processing">History Processing</h3>
+<p>Enable image parsing in your configuration:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">agent</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">history_processors</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">image_parsing</span><span class="w">  </span><span class="c1"># Parse base64 encoded images in observations</span>
 </code></pre></div>
-</details>
-
-<h2 id="tradeoffs-between-resolution-rate-and-cost">Tradeoffs between resolution rate and cost</h2>
-<ul>
-<li>Running multi-attempt configurations will always be <em>very</em> expensive. Don't use them if cost is of importance.</li>
-<li>The simplest setting to keep cost in check is the per instance cost limit or turn limit.
-  Without limiting cost, the average cost will also converge to infinity, as the agent will never stop iterating.
-  With Claude 3.7, a cost-conservative limit would be $1 instance limit or lower and a turn count limit of 50.
-  For our swe-bench submissions we use slightly higher limits (see the configs above).</li>
-</ul>
+<h3 id="tool-bundles">Tool Bundles</h3>
+<p>Include image and browser tools for visual tasks:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">agent</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">tools</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">bundles</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tools/image_tools</span><span class="w">  </span><span class="c1"># includes open_image tool to let models open image files</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tools/web_browser</span><span class="w">  </span><span class="c1"># includes 17 browser automation tools (click_mouse, open_site, etc.)</span>
+</code></pre></div>
+<p>The <code>web_browser</code> bundle provides tools for:
+- Opening websites (<code>open_site</code>)
+- Taking screenshots (<code>screenshot_site</code>)
+- Interacting with web pages (<code>click_mouse</code>, <code>type_text</code>, <code>scroll_on_page</code>)
+- Executing JavaScript (<code>execute_script_on_page</code>)
+- And more - see the <a href="../../config/config/#web-browser-tools">configuration guide</a> for the full list</p>
+<h3 id="templates-configuration">Templates Configuration</h3>
+<p>We've enabled multimodal processing when <code>--instances.type=swe-bench --instances.subset=multimodal</code> are set.</p>
+<p>To disable this behavior, you must set <code>--templates.disable_image_processing=true</code>.</p>
 
 
 
@@ -2622,44 +2554,6 @@ You can use a sentinel script like the following to clean them up periodically
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../batch_mode/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Batch mode">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Batch mode
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../adding_custom_tools/" class="md-footer__link md-footer__link--next" aria-label="Next: Adding custom tools">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Adding custom tools
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
